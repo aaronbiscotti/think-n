@@ -8,7 +8,7 @@ const firebaseConfig = {
   projectId: "think-n",
   storageBucket: "think-n.appspot.com",
   messagingSenderId: "571185753164",
-  appId: "1:571185753164:web:ad6bf1d10ced135fd7d8e9",
+  appId: "1:571185753164:web:ad6bf1d10ced135fd7d8e9"
 };
 
 // Initialize Firebase
