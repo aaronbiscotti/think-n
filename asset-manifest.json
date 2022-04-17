@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/think-n/static/css/main.af561932.css",
+    "main.js": "/think-n/static/js/main.5d14be50.js",
+    "static/media/register.svg": "/think-n/static/media/register.851c198440a0ea892a607f9b516890e1.svg",
+    "static/media/login.svg": "/think-n/static/media/login.4c77a2c084651f4d1dc0f9521bf559a8.svg",
+    "index.html": "/think-n/index.html",
+    "static/media/logo.svg": "/think-n/static/media/logo.9e30078eb730a42e9022fa2116f0dad9.svg",
+    "main.af561932.css.map": "/think-n/static/css/main.af561932.css.map",
+    "main.5d14be50.js.map": "/think-n/static/js/main.5d14be50.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.af561932.css",
+    "static/js/main.5d14be50.js"
+  ]
+}
