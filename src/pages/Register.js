@@ -4,9 +4,10 @@ import { Link, useNavigate } from "react-router-dom";
 import { UserAuth } from "../context/AuthContext";
 
 function Register() {
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState(false)
+  const [error, setError] = useState('')
   const { createUser } = UserAuth();
   const navigate = useNavigate()
 
@@ -15,12 +16,12 @@ function Register() {
     setError('');
     try {
       await createUser(email, password);
-      navigate('/home ')
+      navigate('/home')
     } catch (e) {
-      setError(true);
-      console.log(e.message);
+      setError(e.message);
     }
   };
+
   return (
     <div className="bg-[#FAFAFA] flex relative p-20 justify-around">
       <div className="flex flex-col justify-center align-center">
@@ -37,7 +38,9 @@ function Register() {
               name="name"
               className="h-10 border-2 rounded-md p-5 mt-3 focus:border-none w-full"
               placeholder="name"
+              required
               autoComplete="off"
+              onChange={(e) => setName(e.target.value)}
             />
           </div>
           <div>
@@ -49,8 +52,8 @@ function Register() {
               autoComplete="off"
               onChange={(e) => setEmail(e.target.value)}
             />
-            <span id="text"></span>
           </div>
+          {error && <h2 class="mt-3 text-sm">Email already in use, please <Link to="/login" class="text-[#0051ED]">log in</Link></h2>}
           <div>
             <input
               type="password"
@@ -60,22 +63,18 @@ function Register() {
               autoComplete="off"
               onChange={(e) => setPassword(e.target.value)}
             />
-            <span id="text"></span>
           </div>
-          <div>
-            <input
-              type="password"
-              placeholder="re-enter password"
-              className="h-10 border-2 rounded-md p-5 mt-3 focus:border-none w-full"
-              autoComplete="off"
-            />
-            <span id="text"></span>
-          </div>
-
           <button className="font-sm bg-[#0051ED] h-10 flex justify-center items-center mt-3 border-none rounded-md text-white no-underline p-2">
             register
           </button>
-          {error && <h2 class="mt-3">Email already in use, please <Link to="/login" class="text-[#0051ED]">log in</Link></h2>}
+          <div>
+            <h3 class="text-sm mt-1 ">
+              already have an account?
+              <Link to="/login">
+                <span class="text-[#0051ED]">{" "} log in!</span>
+              </Link>
+            </h3>
+          </div>
         </form>
       </div>
       <div className="flex justify-center items-center">

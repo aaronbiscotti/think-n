@@ -1,21 +1,43 @@
 import React from 'react'
 import * as CgIcons from "react-icons/cg";
-
+import * as HiIcons from "react-icons/hi";
 
 const sidebar = () => {
   return (
-    <form action="/" method="get">
-      <label htmlFor="header-search">
-        
-      </label>
-      <input
-        type="text"
-        id="header-search"
-        placeholder="Search blog posts"
-        name="s"
-      />
-      <button type="submit">Search</button>
-    </form>
+    <div className="w-1/6">
+      <div class="mt-4 px-3">
+        <form
+          action="/"
+          method="get"
+          className="flex items-center h-10 text-xl"
+        >
+          <div class="relative mb-5">
+            <div class="absolute inset-y-0  left-0 flex items-center pl-2 pointer-events-none">
+              <CgIcons.CgSearch />
+            </div>
+            <input
+              type="text"
+              id="header-search"
+              placeholder="Search"
+              name="s"
+              className="rounded-xl pl-8 text-search"
+            />
+          </div>
+        </form>
+      </div>
+      <div>
+        <p className="text-[#7e7e7e] mt-2 px-5">menu</p>
+        <div className="flex pl-5 items-center h-10 bg-[#E5EDFD]  my-1 w-full">
+          <HiIcons.HiMenu />
+          <h1 className="px-5">questions</h1>
+        </div>
+      </div>
+
+      <div className="flex pl-5 items-center h-10 bg-[#E5EDFD] my-2">
+        <HiIcons.HiMenu />
+        <h1 className="px-5">tags</h1>
+      </div>
+    </div>
   );
 }
 

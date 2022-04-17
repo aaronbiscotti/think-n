@@ -6,19 +6,18 @@ import { UserAuth } from '../context/AuthContext';
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const [error, setError] = useState(false);
   const navigate = useNavigate();
   const { signIn } = UserAuth();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError('')
+    setError(false)
     try {
       await signIn(email, password)
       navigate('/home')
     } catch (e) {
-      setError(e.message)
-      console.log(e.message)
+      setError(true)
     }
   };
 
@@ -53,8 +52,7 @@ const Login = () => {
             />
             <span id="text"></span>
           </div>
-
-
+          {error && <h2 class="mt-3">email or password invalid!</h2>}
           <button className="font-sm bg-[#0051ED] h-10 flex justify-center items-center mt-3 border-none rounded-md text-white no-underline p-2">
             login
           </button>

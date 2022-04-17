@@ -22,7 +22,6 @@ const Home = () => {
       <NavbarLoggedIn />
       <Sidebar />
       <p>User Email: {user && user.email}</p>
-
       <button onClick={handleLogout}>Logout</button>
     </>
   );
