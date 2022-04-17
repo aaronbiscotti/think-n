@@ -1,12 +1,11 @@
-import React from 'react'
+import React from "react";
 import * as CgIcons from "react-icons/cg";
 import * as HiIcons from "react-icons/hi";
 import * as AiIcons from "react-icons/ai";
 // import * as BsIcons from "react-icons/bs";
 import * as FaIcons from "react-icons/fa";
 import * as VsIcons from "react-icons/vsc";
-import { NavLink } from 'react-router-dom';
-
+import { NavLink } from "react-router-dom";
 
 const sidebar = () => {
   return (
@@ -62,7 +61,7 @@ const sidebar = () => {
           </button>
         </NavLink>
       </div>
-      {/* <p className="text-[#7e7e7e] mt-4 px-5">personal navigator</p>
+      <p className="text-[#7e7e7e] mt-4 px-5">personal navigator</p>
       <button className="flex pl-5 items-center h-10 my-2 w-full">
         <BsIcons.BsQuestionCircle />
         <h1 className="px-5">your questions</h1>
@@ -74,9 +73,9 @@ const sidebar = () => {
       <button className="flex pl-5 items-center h-10 my-2 w-full">
         <AiIcons.AiOutlineHeart />
         <h1 className="px-5">liked posts</h1>
-      </button> */}
+      </button>
       {/* This is the personal navigator section in the side bar, removed because it is too many pages */}
-      <div className="space-x-10 flex justify-center mb-80">
+      <div className="space-x-10 flex justify-center">
         <button className="">
           <VsIcons.VscGithubAlt className="text-4xl bottom-0 mb-2" />
         </button>
@@ -86,10 +85,9 @@ const sidebar = () => {
       </div>
     </div>
   );
-}
+};
 
-export default sidebar
-
+export default sidebar;
 
 //  <form onSubmit={handleSubmit} action="#" id="form" className="w-500">
 //           <div>

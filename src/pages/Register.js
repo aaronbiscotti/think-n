@@ -2,7 +2,9 @@ import register from "./assets/register.svg";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { UserAuth } from "../context/AuthContext";
+import { getAuth, updateProfile } from "firebase/auth";
 import NavbarLanding from "../components/NavbarLanding";
+import getName from "../components/getName";
 
 function Register() {
   const [name, setName] = useState('');
@@ -10,8 +12,8 @@ function Register() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('')
   const { createUser } = UserAuth();
+  const auth = getAuth();
   const navigate = useNavigate()
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
@@ -22,7 +24,6 @@ function Register() {
       setError(e.message);
     }
   };
-
   return (
     <>
       <div className="bg-[#FAFAFA] flex relative p-20 justify-around">
@@ -44,6 +45,7 @@ function Register() {
                 autoComplete="off"
                 onChange={(e) => setName(e.target.value)}
               />
+              <getName name={name} />
             </div>
             <div>
               <input

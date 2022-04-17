@@ -15,7 +15,6 @@ import Sidebar from './components/Sidebar';
 import Profile from './pages/Profile';
 import AddQuestions from './pages/AddQuestions';
 import AuthProtectedRoute from './components/AuthProtectedRoute';
-import Featured from './components/Featured';
 
 function App() {
   const auth = getAuth();
@@ -55,7 +54,7 @@ function App() {
               </Routes>
             </div>
             <div className="rightSide">
-              <Featured />
+              {/* {sidebar ? <Featured /> : null} */}
             </div>
           </div>
         </Router>
