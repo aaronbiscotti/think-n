@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/think-n/static/css/main.c433e10a.css",
-    "main.js": "/think-n/static/js/main.5c3c4e1c.js",
-    "static/media/register.svg": "/think-n/static/media/register.851c198440a0ea892a607f9b516890e1.svg",
-    "static/media/login.svg": "/think-n/static/media/login.4c77a2c084651f4d1dc0f9521bf559a8.svg",
-    "index.html": "/think-n/index.html",
-    "static/media/logo.svg": "/think-n/static/media/logo.9e30078eb730a42e9022fa2116f0dad9.svg",
-    "main.c433e10a.css.map": "/think-n/static/css/main.c433e10a.css.map",
-    "main.5c3c4e1c.js.map": "/think-n/static/js/main.5c3c4e1c.js.map"
+    "main.css": "/register/static/css/main.c433e10a.css",
+    "main.js": "/register/static/js/main.5db8dbb2.js",
+    "static/media/register.svg": "/register/static/media/register.851c198440a0ea892a607f9b516890e1.svg",
+    "static/media/login.svg": "/register/static/media/login.4c77a2c084651f4d1dc0f9521bf559a8.svg",
+    "index.html": "/register/index.html",
+    "static/media/logo.svg": "/register/static/media/logo.9e30078eb730a42e9022fa2116f0dad9.svg",
+    "main.c433e10a.css.map": "/register/static/css/main.c433e10a.css.map",
+    "main.5db8dbb2.js.map": "/register/static/js/main.5db8dbb2.js.map"
   },
   "entrypoints": [
     "static/css/main.c433e10a.css",
-    "static/js/main.5c3c4e1c.js"
+    "static/js/main.5db8dbb2.js"
   ]
 }
