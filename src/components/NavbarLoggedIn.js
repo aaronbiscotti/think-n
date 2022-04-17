@@ -9,8 +9,8 @@ import { Link } from "react-router-dom";
 const NavbarLoggedIn = () => {
   return (
     <>
-      <nav className="h-25 pl-5 p-3 pr-5 flex justify-between items-center">
-        <Link to="/" className="flex justify-center items-center">
+      <nav className="h-25 pl-5 p-3 pr-5 flex justify-between items-center bg-white">
+        <Link to="/home" className="flex justify-center items-center">
           <div className="flex">
             <img src={Logo} />
             <h1 className="p-3 pl-2">
@@ -19,9 +19,9 @@ const NavbarLoggedIn = () => {
           </div>
         </Link>
 
-        <div className="flex ">
+        <div className="flex items-center space-x-4">
           <div className="flex justify-center align-center pl-2 pr-2 rounded-lg text-white mx-1 bg-[#0051ED]">
-            <Link to="/register">
+            <Link to="/post">
               <button className="flex justify-center items-center h-10 p-3 text-sm font-bold">
                 <IoIcons.IoAddCircleOutline
                   className="h-4 #fff"
@@ -32,13 +32,13 @@ const NavbarLoggedIn = () => {
             </Link>
           </div>
           <Link to="#">
-            <MdIcons.MdOutlineNotificationsNone className="text-4xl" />
+            <MdIcons.MdOutlineNotificationsNone className="text-3xl" />
           </Link>
-          <div className=" text-4xl pl-2 pr-2 rounded-lg  mx-1 ">
-            <Link to="#">
-              <CgIcons.CgProfile />
-            </Link>
-          </div>
+          <Link to="/profile">
+            <div className=" text-3xl pr-2 rounded-lg">
+                <CgIcons.CgProfile />
+            </div>
+          </Link>
         </div>
       </nav>
     </>

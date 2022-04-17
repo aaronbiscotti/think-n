@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const NavbarLanding = () => {
   return (
     <>
-      <nav className="h-25 pl-5 p-3 pr-5 flex justify-between items-center">
+      <nav className="h-25 pl-5 p-3 pr-5 flex justify-between items-center bg-white">
         <Link to="/" className="flex justify-center items-center">
           <div className="flex">
             <img src={Logo} />

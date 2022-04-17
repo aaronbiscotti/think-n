@@ -6,30 +6,26 @@
 
 body {
   height: 100vh;
-  background:#fafafa}
+  background: #fafafa;
+}
 
 input:focus, textarea:focus, select:focus{
   outline: 2px solid #E5E7EB;
   outline-offset: 0;
 }
-.visually-hidden {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
+
+.layout {
+
+  display: grid;
+  grid:
+    "header header header" auto
+    "leftSide body rightSide" 3fr
+    ". . ." auto
+    / auto 1fr auto;
 }
-.signupbtn{
-  background-color: rgba(45,67,106, 0.9);
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-  border: none;
-  border-radius: 4px;
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  padding: 0.3em 1em 0.3em 1em;
-  max-width: fit-content;
-  margin: 0 auto;
-}
+
+.header { grid-area: header; }
+.leftSide { grid-area: leftSide; }
+.body { grid-area: body; padding: 30px; }
+.rightSide {grid-area: rightSide; padding: 30px; }
+
